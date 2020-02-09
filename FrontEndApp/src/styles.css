@@ -13,3 +13,6 @@ width: auto;
     .customTooltip .arrow::before {
         border-bottom-color: #fff;
       }
+      .test{
+        color:red;
+      }
