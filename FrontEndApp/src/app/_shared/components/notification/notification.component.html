@@ -1,0 +1,20 @@
+<div id="notification-box" *ngIf="showNotification" [@enter] [@leave]
+  (click)="hide()">
+  <div [ngSwitch]="Type">
+    <div class="d-flex justify-content-end"*ngSwitchCase="MyType.Error">
+      <div class="feedbackMsg text-white bg-danger {{notificationExtraclass}}"><i
+          class="fa fa-trash-alt"></i>
+        {{Message}}</div>
+    </div>
+    <div class="d-flex justify-content-end"*ngSwitchCase="MyType.Alert">
+      <div class="feedbackMsg text-white bg-warning {{notificationExtraclass}}"><i
+          class="fa fa-warning"></i>
+        {{Message}}</div>
+    </div>
+    <div class="d-flex justify-content-end"*ngSwitchCase="MyType.Success">
+      <div class="feedbackMsg text-white bg-success {{notificationExtraclass}}"><i
+          class="fa fa-check-circle"></i>
+        {{Message}}</div>
+    </div>
+  </div>
+</div>

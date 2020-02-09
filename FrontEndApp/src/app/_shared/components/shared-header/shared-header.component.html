@@ -1,0 +1,44 @@
+<header >
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-between">
+      <div class="logoSide">
+
+        <button class="navbar-toggler d-lg-none d-xl-none" type="button" data-toggle="collapse" data-target="#navbars"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="fa fa-bars"></span>
+        </button>
+        <a class="logoBox" href="#">
+          <img src="assets/image/logo-fullNew.png" />
+        </a>
+      </div>
+      <div class="fastlinks-side d-flex flex-column"> 
+         <ul class="followLinks">
+          <li><a target="_blank" href="https://twitter.com/QLCentre"><i class="fab fa-twitter"></i></a></li>
+          <li><a target="_blank" href="https://www.instagram.com/qatarleadershipcentre/"><i class="fab fa-instagram"></i></a></li>
+          <li>
+            <a *ngIf="isArabicLanguage" class="lang" (click)="changeLanguage()">En</a>
+            <a *ngIf="!isArabicLanguage" class="lang" (click)="changeLanguage()">ع</a>
+          </li>
+        </ul> 
+        <p id="memberLogin" class="login-row"> {{'QLC Members'|translate}}:<a href="{{environmentVars.clientAppUrl}}"
+          class="font-B"> {{'Login'|translate}}</a>
+      </p>
+       
+        <p id="member" class="login-row d-none">{{'QLC Members'|translate}}:<a href="javascript:void(0)"
+            class="font-B"> {{'Portal'|translate}}</a> </p>
+        <p id="memberWelcome" class="login-row d-none"> {{'Welcome'|translate}}:<span class="font-B" id="userFullName"></span> </p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="mainMenu navbar navbar-expand-lg">
+    <div class="container">
+      <div class="collapse navbar-collapse" id="navbars">
+      </div>
+    </div>
+  </div>
+  <section class="wow fadeIn">
+  </section>
+</header>
+

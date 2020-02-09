@@ -1,0 +1,5 @@
+<button type="submit" [ngClass]="buttonClass" class="btn mr-2 " (click)="clickCompleted($event)" [disabled]="buttonDisabled || isLoading ||disabledSuccess">
+    <span *ngIf="!isLoading">{{GetTranslateTitle()}} </span>
+    <span *ngIf="isLoading">{{GetTranslateTitle()}} </span>
+    <i *ngIf="isLoading" class="fa fa-circle-o-notch fa-spin" style="font-size:12px"></i>
+</button>

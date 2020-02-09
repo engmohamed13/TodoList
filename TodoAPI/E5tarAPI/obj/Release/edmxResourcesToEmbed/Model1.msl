@@ -1,0 +1,377 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_A4037C_E5tardpModelStoreContainer" CdmEntityContainer="DB_A4037C_E5tardpEntities">
+    <EntitySetMapping Name="AspNetRoles">
+      <EntityTypeMapping TypeName="DB_A4037C_E5tardpModel.AspNetRoles">
+        <MappingFragment StoreEntitySet="AspNetRoles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="FK_Company_Id" ColumnName="FK_Company_Id" />
+          <ScalarProperty Name="IconColor" ColumnName="IconColor" />
+          <ScalarProperty Name="Discriminator" ColumnName="Discriminator" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserClaims">
+      <EntityTypeMapping TypeName="DB_A4037C_E5tardpModel.AspNetUserClaims">
+        <MappingFragment StoreEntitySet="AspNetUserClaims">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserLogins">
+      <EntityTypeMapping TypeName="DB_A4037C_E5tardpModel.AspNetUserLogins">
+        <MappingFragment StoreEntitySet="AspNetUserLogins">
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="DB_A4037C_E5tardpModel.AspNetUsers">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="FK_Company_Id" ColumnName="FK_Company_Id" />
+          <ScalarProperty Name="FK_UserImage_Id" ColumnName="FK_UserImage_Id" />
+          <ScalarProperty Name="FK_Postion_Id" ColumnName="FK_Postion_Id" />
+          <ScalarProperty Name="Extantion" ColumnName="Extantion" />
+          <ScalarProperty Name="Profile_photo" ColumnName="Profile_photo" />
+          <ScalarProperty Name="FK_UserType_Id" ColumnName="FK_UserType_Id" />
+          <ScalarProperty Name="Psk" ColumnName="Psk" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspUserType">
+      <EntityTypeMapping TypeName="DB_A4037C_E5tardpModel.AspUserType">
+        <MappingFragment StoreEntitySet="AspUserType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BrandImage">
+      <EntityTypeMapping TypeName="DB_A4037C_E5tardpModel.BrandImage">
+        <MappingFragment StoreEntitySet="BrandImage">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CategoryImage">
+      <EntityTypeMapping TypeName="DB_A4037C_E5tardpModel.CategoryImage">
+        <MappingFragment StoreEntitySet="CategoryImage">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Colors">
+      <EntityTypeMapping TypeName="DB_A4037C_E5tardpModel.Colors">
+        <MappingFragment StoreEntitySet="Colors">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Fk_Item_Id" ColumnName="Fk_Item_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Company">
+      <EntityTypeMapping TypeName="DB_A4037C_E5tardpModel.Company">
+        <MappingFragment StoreEntitySet="Company">
+          <ScalarProperty Name="company_id" ColumnName="company_id" />
+          <ScalarProperty Name="company_name" ColumnName="company_name" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="fax" ColumnName="fax" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="url" ColumnName="url" />
+          <ScalarProperty Name="payment_method" ColumnName="payment_method" />
+          <ScalarProperty Name="discount_type" ColumnName="discount_type" />
+          <ScalarProperty Name="goods_type" ColumnName="goods_type" />
+          <ScalarProperty Name="logo" ColumnName="logo" />
+          <ScalarProperty Name="Companycol" ColumnName="Companycol" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="Profile_photo" ColumnName="Profile_photo" />
+          <ScalarProperty Name="FK_CompanyImage_ID" ColumnName="FK_CompanyImage_ID" />
+          <ScalarProperty Name="FK_Category_Id" ColumnName="FK_Category_Id" />
+          <ScalarProperty Name="FK_Locations_Id" ColumnName="FK_Locations_Id" />
+          <ScalarProperty Name="stateCompany" ColumnName="stateCompany" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CompanyImage">
+      <EntityTypeMapping TypeName="DB_A4037C_E5tardpModel.CompanyImage">
+        <MappingFragment StoreEntitySet="CompanyImage">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contacts">
+      <EntityTypeMapping TypeName="DB_A4037C_E5tardpModel.Contacts">
+        <MappingFragment StoreEntitySet="Contacts">
+          <ScalarProperty Name="user_code" ColumnName="user_code" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="facebook" ColumnName="facebook" />
+          <ScalarProperty Name="twitter" ColumnName="twitter" />
+          <ScalarProperty Name="linkdln" ColumnName="linkdln" />
+          <ScalarProperty Name="fax" ColumnName="fax" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ItemsImage">
+      <EntityTypeMapping TypeName="DB_A4037C_E5tardpModel.ItemsImage">
+        <MappingFragment StoreEntitySet="ItemsImage">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Keywords">
+      <EntityTypeMapping TypeName="DB_A4037C_E5tardpModel.Keywords">
+        <MappingFragment StoreEntitySet="Keywords">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Fk_Item_Id" ColumnName="Fk_Item_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Locations">
+      <EntityTypeMapping TypeName="DB_A4037C_E5tardpModel.Locations">
+        <MappingFragment StoreEntitySet="Locations">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="DB_A4037C_E5tardpModel.Orders">
+        <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="orderID" ColumnName="orderID" />
+          <ScalarProperty Name="order_number" ColumnName="order_number" />
+          <ScalarProperty Name="order_date" ColumnName="order_date" />
+          <ScalarProperty Name="shipDate" ColumnName="shipDate" />
+          <ScalarProperty Name="shipper_id" ColumnName="shipper_id" />
+          <ScalarProperty Name="sales_tax" ColumnName="sales_tax" />
+          <ScalarProperty Name="duration" ColumnName="duration" />
+          <ScalarProperty Name="error_msg" ColumnName="error_msg" />
+          <ScalarProperty Name="delted" ColumnName="delted" />
+          <ScalarProperty Name="paid" ColumnName="paid" />
+          <ScalarProperty Name="payment_date" ColumnName="payment_date" />
+          <ScalarProperty Name="payment_id" ColumnName="payment_id" />
+          <ScalarProperty Name="FK_UserCreate_Id" ColumnName="FK_UserCreate_Id" />
+          <ScalarProperty Name="FK_Items_Id" ColumnName="FK_Items_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Payment">
+      <EntityTypeMapping TypeName="DB_A4037C_E5tardpModel.Payment">
+        <MappingFragment StoreEntitySet="Payment">
+          <ScalarProperty Name="payment_id" ColumnName="payment_id" />
+          <ScalarProperty Name="payment_type" ColumnName="payment_type" />
+          <ScalarProperty Name="allowed" ColumnName="allowed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Postions">
+      <EntityTypeMapping TypeName="DB_A4037C_E5tardpModel.Postions">
+        <MappingFragment StoreEntitySet="Postions">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Request">
+      <EntityTypeMapping TypeName="DB_A4037C_E5tardpModel.Request">
+        <MappingFragment StoreEntitySet="Request">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RequestName" ColumnName="RequestName" />
+          <ScalarProperty Name="FK_User_Id" ColumnName="FK_User_Id" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServerSettingFront">
+      <EntityTypeMapping TypeName="DB_A4037C_E5tardpModel.ServerSettingFront">
+        <MappingFragment StoreEntitySet="ServerSettingFront">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FrontUrl" ColumnName="FrontUrl" />
+          <ScalarProperty Name="BackUrl" ColumnName="BackUrl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserImage">
+      <EntityTypeMapping TypeName="DB_A4037C_E5tardpModel.UserImage">
+        <MappingFragment StoreEntitySet="UserImage">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="AspNetUserRoles" TypeName="DB_A4037C_E5tardpModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+      <EndProperty Name="AspNetRoles">
+        <ScalarProperty Name="Id" ColumnName="RoleId" />
+      </EndProperty>
+      <EndProperty Name="AspNetUsers">
+        <ScalarProperty Name="Id" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="Brand">
+      <EntityTypeMapping TypeName="DB_A4037C_E5tardpModel.Brand">
+        <MappingFragment StoreEntitySet="Brand">
+          <ScalarProperty Name="ModifedBy" ColumnName="ModifedBy" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="ModifedOn" ColumnName="ModifedOn" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="FK_BrandImage_Id" ColumnName="FK_BrandImage_Id" />
+          <ScalarProperty Name="Profile_photo" ColumnName="Profile_photo" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Category">
+      <EntityTypeMapping TypeName="DB_A4037C_E5tardpModel.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="FK_UserCreate_Id" ColumnName="FK_UserCreate_Id" />
+          <ScalarProperty Name="Desc" ColumnName="Desc" />
+          <ScalarProperty Name="ModifedOn" ColumnName="ModifedOn" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="FK_CategoryImage_Id" ColumnName="FK_CategoryImage_Id" />
+          <ScalarProperty Name="Profile_photo" ColumnName="Profile_photo" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Category_Brand_Relation" TypeName="DB_A4037C_E5tardpModel.Category_Brand_Relation" StoreEntitySet="Category_Brand_Relation">
+      <EndProperty Name="Category">
+        <ScalarProperty Name="Id" ColumnName="FK_Category_Id" />
+      </EndProperty>
+      <EndProperty Name="Brand">
+        <ScalarProperty Name="Id" ColumnName="FK_Brand_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="ItemRate">
+      <EntityTypeMapping TypeName="DB_A4037C_E5tardpModel.ItemRate">
+        <MappingFragment StoreEntitySet="ItemRate">
+          <ScalarProperty Name="FK_Item_Id" ColumnName="FK_Item_Id" />
+          <ScalarProperty Name="Seen" ColumnName="Seen" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="FK_AspUserCreate_Id" ColumnName="FK_AspUserCreate_Id" />
+          <ScalarProperty Name="RateNumber" ColumnName="RateNumber" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Items">
+      <EntityTypeMapping TypeName="DB_A4037C_E5tardpModel.Items">
+        <MappingFragment StoreEntitySet="Items">
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="FK_Category_Id" ColumnName="FK_Category_Id" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ModifedOn" ColumnName="ModifedOn" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="Condition" ColumnName="Condition" />
+          <ScalarProperty Name="Quntity" ColumnName="Quntity" />
+          <ScalarProperty Name="TotalSize" ColumnName="TotalSize" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="FK_ItemsImage_Id" ColumnName="FK_ItemsImage_Id" />
+          <ScalarProperty Name="Profile_photo" ColumnName="Profile_photo" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="Fk_UserCreate_Id" ColumnName="Fk_UserCreate_Id" />
+          <ScalarProperty Name="FK_Brand_Id" ColumnName="FK_Brand_Id" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Attachfile">
+      <EntityTypeMapping TypeName="DB_A4037C_E5tardpModel.Attachfile">
+        <MappingFragment StoreEntitySet="Attachfile">
+          <ScalarProperty Name="Fk_Client_Id" ColumnName="Fk_Client_Id" />
+          <ScalarProperty Name="Fk_FileType_Id" ColumnName="Fk_FileType_Id" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="Extention" ColumnName="Extention" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="clients">
+      <EntityTypeMapping TypeName="DB_A4037C_E5tardpModel.clients">
+        <MappingFragment StoreEntitySet="clients">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FileType">
+      <EntityTypeMapping TypeName="DB_A4037C_E5tardpModel.FileType">
+        <MappingFragment StoreEntitySet="FileType">
+          <ScalarProperty Name="AttachfilePath" ColumnName="AttachfilePath" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NeedUserImage">
+      <EntityTypeMapping TypeName="DB_A4037C_E5tardpModel.NeedUserImage">
+        <MappingFragment StoreEntitySet="NeedUserImage">
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NeedUser">
+      <EntityTypeMapping TypeName="DB_A4037C_E5tardpModel.NeedUser">
+        <MappingFragment StoreEntitySet="NeedUser">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="ModifedOn" ColumnName="ModifedOn" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="FK_NeedUserImage_Id" ColumnName="FK_NeedUserImage_Id" />
+          <ScalarProperty Name="FK_Category_Id" ColumnName="FK_Category_Id" />
+          <ScalarProperty Name="FK_UserCreate_Id" ColumnName="FK_UserCreate_Id" />
+          <ScalarProperty Name="ProfileName" ColumnName="ProfileName" />
+          <ScalarProperty Name="Extention" ColumnName="Extention" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

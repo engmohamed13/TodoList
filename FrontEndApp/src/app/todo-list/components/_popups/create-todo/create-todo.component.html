@@ -1,0 +1,45 @@
+
+<app-modal-basic #basicModel  [disableAutoClose]="true" [contentHeight]="100" [modelType]=0>
+  <div class="app-modal-header text-center">
+    <h5 class="modal-title text-center" id="exampleModalLabel">{{'Create Todo'
+      | translate}}</h5>
+  </div>
+  <div class="app-modal-body ">
+    <form [formGroup]="createTodolistForm">
+      <div class="d-flex row">
+        <div class="col-12">
+          <div class="form-group M_HavAval">
+            <label class="mb-0" for="title"> {{'Name ' | translate}}
+            </label>
+            <input type="text" formControlName="Name" id="title" maxlength="100" class="form-control M_inputStyl"
+              placeholder="{{'Enter English Title' | translate}}">
+            <control-messages [control]="createTodolistForm.controls.Name" [title]="'Name'"
+              [validationMessages]="validationMessages" [inputType]="'lg-input'"></control-messages>
+          </div>
+        </div>
+       
+        <div class="col-12">
+          <div class="form-group M_HavAval">
+            <label class="mb-0" for="Description">{{'Description' | translate}}
+            </label>
+            <textarea class="form-control" id="Description" rows="4"  formControlName="Description"
+              placeholder="{{'Enter Embed Video Html' | translate}}"></textarea>
+            <control-messages [control]="createTodolistForm.controls.Description" [title]="'Description'"
+              [validationMessages]="validationMessages" [inputType]="'lg-input'"></control-messages>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="app-modal-footer text-center">
+    <div class="modalControlBtns">
+
+        <button class="btn btn-primary" (click)="save()" [disabled]="!createTodolistForm.valid">
+          {{'create' | translate}}
+        </button>
+        <button class="btn" (click)="closeCreation()">{{'cancel' |
+          translate}}</button>
+    </div>
+  </div>
+</app-modal-basic>
+

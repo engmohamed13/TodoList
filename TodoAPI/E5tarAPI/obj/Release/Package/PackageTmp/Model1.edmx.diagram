@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="dd230a92eac644ec9e23306997483835" Name="Diagram1" ZoomLevel="92">
+        <EntityTypeShape EntityType="DB_A4037C_E5tardpModel.AspNetRoles" Width="1.5" PointX="12.5" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4037C_E5tardpModel.AspNetUserClaims" Width="1.5" PointX="17" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4037C_E5tardpModel.AspNetUserLogins" Width="1.5" PointX="17" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4037C_E5tardpModel.AspNetUsers" Width="1.5" PointX="14.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4037C_E5tardpModel.AspUserType" Width="1.5" PointX="12.5" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4037C_E5tardpModel.BrandImage" Width="1.5" PointX="0.75" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4037C_E5tardpModel.CategoryImage" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4037C_E5tardpModel.Colors" Width="1.5" PointX="9.75" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4037C_E5tardpModel.Company" Width="1.5" PointX="12.5" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4037C_E5tardpModel.CompanyImage" Width="1.5" PointX="10.25" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4037C_E5tardpModel.Contacts" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4037C_E5tardpModel.ItemsImage" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4037C_E5tardpModel.Keywords" Width="1.5" PointX="9.75" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4037C_E5tardpModel.Locations" Width="1.5" PointX="10.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4037C_E5tardpModel.Orders" Width="1.5" PointX="9.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4037C_E5tardpModel.Payment" Width="1.5" PointX="7.5" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4037C_E5tardpModel.Postions" Width="1.5" PointX="2.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4037C_E5tardpModel.Request" Width="1.5" PointX="17" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4037C_E5tardpModel.ServerSettingFront" Width="1.5" PointX="4.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4037C_E5tardpModel.UserImage" Width="1.5" PointX="12.5" PointY="21.75" IsExpanded="true" />
+        <AssociationConnector Association="DB_A4037C_E5tardpModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4037C_E5tardpModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4037C_E5tardpModel.FK_AspNetUsers_AspUserType" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4037C_E5tardpModel.FK_AspNetUsers_Company1" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4037C_E5tardpModel.FK_AspNetUsers_UserImage" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4037C_E5tardpModel.FK_Request_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4037C_E5tardpModel.FK_Company_CompanyImage" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4037C_E5tardpModel.FK_Company_Locations" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4037C_E5tardpModel.orders_payment_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4037C_E5tardpModel.AspNetUserRoles" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DB_A4037C_E5tardpModel.Brand" Width="1.5" PointX="3" PointY="11.75" />
+        <EntityTypeShape EntityType="DB_A4037C_E5tardpModel.Category" Width="1.5" PointX="5.25" PointY="10.25" />
+        <AssociationConnector Association="DB_A4037C_E5tardpModel.FK_Category_CategoryImage" />
+        <AssociationConnector Association="DB_A4037C_E5tardpModel.FK_Brand_BrandImage" />
+        <AssociationConnector Association="DB_A4037C_E5tardpModel.FK_Company_Category1" />
+        <AssociationConnector Association="DB_A4037C_E5tardpModel.Category_Brand_Relation" />
+        <EntityTypeShape EntityType="DB_A4037C_E5tardpModel.ItemRate" Width="1.5" PointX="20" PointY="6.125" />
+        <EntityTypeShape EntityType="DB_A4037C_E5tardpModel.Items" Width="1.5" PointX="20" PointY="10.375" />
+        <AssociationConnector Association="DB_A4037C_E5tardpModel.FK_ItemRate_AspNetUsers" />
+        <AssociationConnector Association="DB_A4037C_E5tardpModel.FK_Items_AspNetUsers" />
+        <AssociationConnector Association="DB_A4037C_E5tardpModel.FK_Items_Brand" />
+        <AssociationConnector Association="DB_A4037C_E5tardpModel.FK_Items_Category" />
+        <AssociationConnector Association="DB_A4037C_E5tardpModel.FK_Colors_Items" />
+        <AssociationConnector Association="DB_A4037C_E5tardpModel.FK_ItemRate_Items" />
+        <AssociationConnector Association="DB_A4037C_E5tardpModel.FK_Items_ItemsImage" />
+        <AssociationConnector Association="DB_A4037C_E5tardpModel.FK_Keywords_Items" />
+        <AssociationConnector Association="DB_A4037C_E5tardpModel.FK_Orders_Items" />
+        <EntityTypeShape EntityType="DB_A4037C_E5tardpModel.Attachfile" Width="1.5" PointX="14.625" PointY="13" />
+        <EntityTypeShape EntityType="DB_A4037C_E5tardpModel.clients" Width="1.5" PointX="12.375" PointY="13.375" />
+        <EntityTypeShape EntityType="DB_A4037C_E5tardpModel.FileType" Width="1.5" PointX="12.375" PointY="25.25" />
+        <AssociationConnector Association="DB_A4037C_E5tardpModel.FK__Attachfil__Fk_Cl__1699586C" />
+        <AssociationConnector Association="DB_A4037C_E5tardpModel.FK__Attachfil__Fk_Fi__15A53433" />
+        <EntityTypeShape EntityType="DB_A4037C_E5tardpModel.NeedUserImage" Width="1.5" PointX="14.75" PointY="17.125" />
+        <EntityTypeShape EntityType="DB_A4037C_E5tardpModel.NeedUser" Width="1.5" PointX="17" PointY="12.625" />
+        <AssociationConnector Association="DB_A4037C_E5tardpModel.FK__NeedUser__FK_Use__1B5E0D89" />
+        <AssociationConnector Association="DB_A4037C_E5tardpModel.FK__NeedUser__FK_Cat__1C5231C2" />
+        <AssociationConnector Association="DB_A4037C_E5tardpModel.FK__NeedUser__FK_Nee__1D4655FB" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

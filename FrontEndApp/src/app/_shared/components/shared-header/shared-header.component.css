@@ -1,0 +1,28 @@
+.img-prog img {
+    position: absolute;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+#separator {
+    font-size: 18px;
+}
+
+.lang {
+    font-size: 18px;
+}
+
+.colored-text, .lang {
+    color: #891345 !important;
+}
+
+.caret-down i {
+    color: #891345 !important;
+    font-weight: bold;
+    font-size: 16px
+}
+
+.header-image {
+    border-radius: 50%;
+}

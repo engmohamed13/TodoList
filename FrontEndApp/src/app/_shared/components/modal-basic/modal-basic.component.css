@@ -1,0 +1,111 @@
+.basic.modal {
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+}
+
+.basic.fade {
+    opacity: 0;
+    -webkit-transition: opacity .15s linear;
+    -o-transition: opacity .15s linear;
+    transition: opacity .15s linear;
+}
+
+.basic.fade.in {
+    opacity: 1;
+}
+
+.basic.modal.fade.in .modal-dialog {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+
+.basic.modal.fade .modal-dialog {
+    -webkit-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+    -webkit-transform: translate(0, -25%);
+    -ms-transform: translate(0, -25%);
+    -o-transform: translate(0, -25%);
+    transform: translate(0, -25%);
+}
+
+.basic .basic-close {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 16px;
+    color: #292b2c;
+}
+
+.basic .basic-close-light-box {
+    position: absolute;
+    top: -31px;
+    right: -20px;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    text-shadow: none;
+}
+
+.app-modal-header {
+    width: 100%;
+}
+
+.modal-title {
+    color: #333;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-transform: capitalize;
+}
+
+.modal-header {
+    padding: 1.2rem;
+    border-bottom: none;
+    padding-bottom: 1rem;
+}
+
+.modal-content {
+    border-radius: 3px;
+    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.08);
+    border: none;
+}
+
+.modal-footer{
+    background: #ffffff !important;
+    border-top: 0!important;
+    margin-bottom: 20px;
+}
+
+.modal-header{
+    background: #f9f9fb !important;
+}
+
+.feedbackMsg {
+    border-radius: 0px;
+    width: 100%;
+}
+
+.app-modal-body p{
+    margin-bottom: 0!important;
+    margin-top: 10px!important;
+    padding: 5px!important;
+    font-size: 15px!important;
+}
+/*please dont catch any public class*/
+.modal-body{
+    padding-top:1rem!important;
+    padding-right:1rem !important;
+    padding-left:1rem!important;
+    overflow: auto;
+}
+

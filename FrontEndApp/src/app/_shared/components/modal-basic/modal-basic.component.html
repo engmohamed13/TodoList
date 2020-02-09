@@ -1,0 +1,18 @@
+<div (click)="onContainerClicked($event)" class="basic modal fade modalCenterTitle" tabindex="-1" [ngClass]="{'in': visibleAnimate}"
+  [ngStyle]="{'display': visible ? 'block' : 'none', 'opacity': visibleAnimate ? 1 : 0 }">
+  <div class="modal-dialog modal-dialog-centered {{dialogClass}}" [ngClass]="getDialogSizeClass()">
+      <!-- [@enter] [@leave] -->
+    <div class="modal-content" *ngIf="visible">
+      <div *ngIf="!hideHeader" class="modal-header d-inline border-bottom">
+        <ng-content select=".app-modal-header"></ng-content>
+      </div>
+      <app-notification #notification></app-notification>
+      <div class="modal-body {{modalBodyCssClasses}}" id="modal-body" adjustPopupHeight>
+        <ng-content select=".app-modal-body"></ng-content>
+      </div>
+      <div *ngIf="!hideFooter" class="modal-footer d-flex justify-content-center advSearchBtnControls py-3">
+        <ng-content select=".app-modal-footer"></ng-content>
+      </div>
+    </div>
+  </div>
+</div>

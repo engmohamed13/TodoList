@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MY App</title>
+  <base href="/">
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+	<!-- Required meta tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href="assets/theme/imgs/favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="assets/theme/css/bootstrap.min.css" id="bootstrapStyle">
+	<link rel="stylesheet" href="assets/theme/css/all.min.css">
+	<link href="assets/theme/css/hover.css" rel="stylesheet" />
+	<link href="assets/theme/css/animate.css" rel="stylesheet" />
+	<link href="assets/theme/css/jquery.mCustomScrollbar.min.css" rel="stylesheet" />
+	<!-- Owl Stylesheets -->
+	<link rel="stylesheet" href="assets/theme/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="assets/theme/css/owl.theme.default.min.css">
+  <link href="assets/theme/css/e-StyleSheet.css" id="english-style-b" rel="stylesheet" />
+  <link href="assets/theme/css/e-index.css" id="english-style-c" rel="stylesheet" />
+  <link href="assets/theme/css/StyleSheet.css"  rel="stylesheet" />
+  <!-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+
+<!-- <script src="assets/theme/js/angular.js"></script> -->
+
+
+
+</head>
+<body >
+  <app-root></app-root>
+  	
+	
+<!-- <script src="assets/theme/js/jquery-3.4.1.min.js"></script>
+<script src="assets/theme/js/popper.min.js"></script>
+<script src="assets/theme/js/bootstrap.min.js" id="bootstrapJs"></script>
+<script src="assets/theme/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/theme/js/owl.carousel.js"></script>
+<script src="assets/theme/js/wow.min.js"></script>
+<script src="assets/theme/js/JavaScript.js"></script> -->
+
+<script>
+
+
+  $(document).ready(function () { 
+    // $(".customScroll").mCustomScrollbar({
+    //   theme: "3d-thick-dark",
+    //   mouseWheel:{ enable: true }
+    //     });
+    
+
+
+    function scroll(e) { 
+      e.preventDefault();
+      var $this = $(e.currentTarget) ;
+
+
+      var totalitems = $(".eventsSection .event-list").length;
+      // get the height of .child
+      var scrollval = $('.eventsSection .event-list').outerHeight();
+      // work out the total height.
+      var totalheight = (totalitems * scrollval) - ($(".eventListBoxwrapper").outerHeight());
+
+      if ($this.hasClass('prev')) {
+        var currentscrollval = parseInt($('.eventListBoxwrapper').scrollTop());
+
+        //$('.eventListBoxwrapper').scrollTop(currentscrollval - scrollval);
+        $('.eventListBoxwrapper').animate(
+          {
+            scrollTop: currentscrollval - scrollval
+          },
+          1000
+        ); 
+      } else {
+        var currentscrollval = $('.eventListBoxwrapper').scrollTop();
+
+        //$('.eventListBoxwrapper').scrollTop(scrollval + currentscrollval);
+        $('.eventListBoxwrapper').animate(
+          {
+            scrollTop: scrollval + currentscrollval
+          },
+          1000
+        ); 
+      }
+       
+    }
+    $('.eventsSection .event-controls .arrows a').on('click', scroll);
+    $(window).on("load resize", function (e) {
+      $(".eventListBoxwrapper").height($(".event-list").outerHeight());
+    });    
+  });
+</script> 
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-68693103-7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-68693103-7');
+</script>
+</body>
+</html>

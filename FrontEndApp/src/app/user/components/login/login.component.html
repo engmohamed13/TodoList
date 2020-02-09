@@ -1,0 +1,54 @@
+
+          <div class="loginForm">
+              
+          <div class="card">
+                <div class="M_welocmDiv mt-4">
+                        <label class="w-100 text-center font-Thin">{{'Welcome Back'|translate}}</label>
+                        <label class="w-100 text-center font-Light color_link" ><a [routerLink]="['/user/register']">
+                            {{'New user ?'|translate}}</a></label>
+                      </div>
+              <div class="card-body text-center">
+                  <div class="mb-4">
+                      <i class="icons ti-unlock auth-icon"></i>
+                  </div>
+                  <p>Can use username:Admin and password 123456qaz to login to todolist or register new user </p>
+                  <h3 class="mb-4">Login</h3>
+
+                  <form [formGroup]="loginForm" class="loginFormAdmin">
+                      <div class="input-group mb-3 ">
+
+                          <input type="email" class="form-control Hborder_right" placeholder="Registered Email" maxlength="50"
+                              formControlName="username" nfNoSpaces>
+
+                          <control-messages [control]="loginForm.controls.username" [title]="'username'"
+                              [validationMessages]="validationMessages" [inputType]="'lg-input'"></control-messages>
+
+                      </div>
+                      <div class="input-group mb-4 ">
+
+                          <input type="password" class="form-control Hborder_right" placeholder="Password" formControlName="password"
+                              maxlength="20" />
+
+                          <control-messages [control]="loginForm.controls.password" [title]="'password'"
+                              [validationMessages]="validationMessages" [inputType]="'lg-input'"></control-messages>
+                      </div>
+                      <!-- <div class="form-group text-left">
+                          <div class="checkbox checkbox-fill d-inline">
+
+                              <input type="checkbox" name="checkbox-fill-1" id="checkbox-fill-a1" checked=""
+                                  formControlName="rememberMe">
+                              <label for="checkbox-fill-a1" class="cr"> {{'Remember_me' | translate}}</label>
+                          </div>
+                      </div> -->
+
+
+                      <button type="submit" class="btn btn-primary  mb-4 bg-success " (click)="login()" [disabled]="!loginForm.valid">{{'Sign In'
+                          | translate}}</button>
+
+
+                     
+                  </form>
+
+              </div>
+          </div>
+        </div>

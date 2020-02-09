@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+.customTooltip{
+  max-width: 65% !important;
+width: auto;
+}
+.customTooltip .tooltip-inner{
+ 
+        max-width: 100%;
+    background: #FFF;
+    color: #666;
+    font-size: 1rem
+    }
+    .customTooltip .arrow::before {
+        border-bottom-color: #fff;
+      }

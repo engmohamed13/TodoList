@@ -1,0 +1,18 @@
+﻿{
+  "message_whiteSpace": "space not value valid",
+"Add New User Successsfully":"Add New User Successsfully",
+"First name min length 2 chars":"First name min length 2 chars",
+"First name is required":"First name is required",
+"Password_conditions": "Password must contain at least one number and one character.",
+"Password_length": "Password length should not be less than 8 characters.",
+"insert_password_confirmation": "Please insert password confirmation.",
+"insert_email": "Please insert your email",
+"insert_same_again": "Please enter the same value again",
+"Welcome To ToDo":"Welcome To ToDo"
+
+
+
+
+
+
+}

@@ -1,0 +1,9 @@
+
+<!-- <span [class]="inputType == 'lg-input' ? 'M_valspanInfo animated zoomIn ' : inputType == 'normal-input'? 'M_valspanInfo M_regformTool animated zoomIn' : 'M_valspanInfo animated zoomIn right_3_80rem' "
+*ngIf="errorMessage" data-toggle="tooltip" data-placement="top" [attr.data-original-title]="errorMessage">
+<i class="icon-info-circle"></i></span>
+<span [class]="inputType == 'lg-input' ? 'M_valspanCheck animated zoomIn' : inputType == 'normal-input'? 'M_valspanCheck  M_regformTool animated zoomIn' : 'M_valspanCheck animated zoomIn right_3_80rem' "
+*ngIf="control.touched && control.dirty && !errorMessage" data-toggle="tooltip" data-placement="top"><i class="icon-check"></i></span>
+ -->
+<span class="error animated fadeIn"*ngIf="errorMessage"><i class="fa
+        fa-exclamation validation-message-icon"></i> {{errorMessage}}</span>

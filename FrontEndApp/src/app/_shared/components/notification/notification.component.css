@@ -1,0 +1,7 @@
+#notification-box .over {
+    z-index: 99999;
+}
+
+#notification-box:hover .over {
+    z-index: 99999;
+}

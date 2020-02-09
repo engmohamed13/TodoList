@@ -1,0 +1,98 @@
+
+<div class="d-flex mt-2 justify-content-end">
+    <!-- <input type="text" [(ngModel)]="keySearch" class="form-control justify-content-start  with_searchInput" (keyup.enter)="onSearch()" maxlength="50"
+    placeholder="Search By Title" />
+  <button (click)="onSearch()" class="btn ml-1 mr-0 btn-form-default ml-4 justify-content-center"><i class="fas fa-search"></i> -->
+    <!-- Search</button> -->
+    <button (click)="add()" class="btn ml-5 bt-primary justify-content-end bg-success ">{{'Add TodoList'|translate}}</button>
+
+  </div>
+<div class="d-flex my-3 justify-content-end">
+  <b class="totalresulttext"> ({{todolists?.length}})
+    {{'Total Todolist' | translate}}</b>
+</div>
+<div class="flex-grow-1 position-relative">
+  <div class="container-fluid" *ngIf="thereIsNoSearchResult">
+    <div class="d-flex justify-content-center">
+      <div class="col-lg-6 col-md-10 col-12 mt-5">
+        <div class="noresultBox py-4 text-center">
+          <i class="icons ti-face-sad no-data-image"></i>
+          <h5 class="my-3"><b>{{'no' | translate}}</b> {{'Search Result'|translate}} <i class="icon-info-circle"></i>
+          </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="table-responsive" *ngIf="!thereIsNoSearchResult" >
+
+    <table class="table  table-striped ">
+      <thead>
+
+        <tr>
+          <th  scope="col">
+              {{'Name' | translate}}
+            
+          </th>
+          <th scope="col">
+              {{'Description' | translate}}
+            
+          </th>
+          <th scope="col">
+            {{'Created Date' | translate}}
+          
+        </th>
+        <th scope="col">
+            {{'Modification Date' | translate}}
+          
+        </th>
+
+          <th style="width:80px;">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let todo of
+        todolists|reverse">
+
+          <td class="text-ellipsis">
+           {{todo.Name}}
+          </td>
+
+          <td >
+            {{todo.Description}}
+          </td>
+          <td>
+            {{todo.CreatedDate | date:"dd/MM/yyyy/HH:mm:ss"}}
+          </td>
+          <td>
+            {{todo.ModificationDate | date:"dd/MM/yyyy/HH:mm:ss"}}
+          </td>
+
+          
+
+          
+          <td>
+            <div class="dropdown moreActions totalG">
+              <a class="btn collapsed dropdown-toggle btn-export" data-toggle="dropdown"><i
+                  class="fas fa-ellipsis-h"></i></a>
+              <div id="ExportTypesBox" class="collapseExport dropdown-menu">
+                <ul class="ExportTypes">
+
+                  <li><a class="fullWidth" (click)="delete(todo.Id)">Delete
+                    </a></li>
+
+                  <li><a class="fullWidth" (click)="edit(todo.Id)">Edit</a></li>
+
+
+                </ul>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+
+<app-create-todo #createTotoPopup (onAdded)="getAll()"></app-create-todo>
+<app-edit-todo #editTotoPopup (onEdit)="getAll()"></app-edit-todo>
+<app-delete-todo #deleteTotoPopup (onDelete)="getAll()"></app-delete-todo>

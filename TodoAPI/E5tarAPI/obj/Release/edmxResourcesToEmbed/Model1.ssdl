@@ -1,0 +1,887 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_A4037C_E5tardpModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AspNetRoles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="FK_Company_Id" Type="int" />
+    <Property Name="IconColor" Type="nvarchar(max)" />
+    <Property Name="Discriminator" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaims">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ClaimType" Type="nvarchar(max)" />
+    <Property Name="ClaimValue" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogins">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUsers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="100" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="100" />
+    <Property Name="location" Type="nvarchar(max)" />
+    <Property Name="FK_Company_Id" Type="int" />
+    <Property Name="FK_UserImage_Id" Type="int" />
+    <Property Name="FK_Postion_Id" Type="int" />
+    <Property Name="Extantion" Type="nvarchar(max)" />
+    <Property Name="Profile_photo" Type="nvarchar(max)" />
+    <Property Name="FK_UserType_Id" Type="int" />
+    <Property Name="Psk" Type="nvarchar" MaxLength="16" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+    <Property Name="PasswordHash" Type="nvarchar(max)" />
+    <Property Name="SecurityStamp" Type="nvarchar(max)" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" />
+    <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="datetime" />
+    <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspUserType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Attachfile">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Extention" Type="nvarchar" MaxLength="10" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fk_FileType_Id" Type="int" />
+    <Property Name="Fk_Client_Id" Type="int" />
+  </EntityType>
+  <EntityType Name="Brand">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Extension" Type="nvarchar" MaxLength="50" />
+    <Property Name="Profile_photo" Type="nvarchar" MaxLength="50" />
+    <Property Name="FK_BrandImage_Id" Type="int" />
+    <Property Name="Description" Type="text" />
+    <Property Name="CreateOn" Type="datetime" StoreGeneratedPattern="Identity" />
+    <Property Name="ModifedOn" Type="datetime" StoreGeneratedPattern="Identity" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifedBy" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="BrandImage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="ImagePath" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Extension" Type="nvarchar" MaxLength="50" />
+    <Property Name="Profile_photo" Type="nvarchar" MaxLength="50" />
+    <Property Name="FK_CategoryImage_Id" Type="int" />
+    <Property Name="CreateOn" Type="datetime" StoreGeneratedPattern="Identity" />
+    <Property Name="ModifedOn" Type="datetime" StoreGeneratedPattern="Identity" />
+    <Property Name="Desc" Type="text" />
+    <Property Name="FK_UserCreate_Id" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="Category_Brand_Relation">
+    <Key>
+      <PropertyRef Name="FK_Category_Id" />
+      <PropertyRef Name="FK_Brand_Id" />
+    </Key>
+    <Property Name="FK_Category_Id" Type="int" Nullable="false" />
+    <Property Name="FK_Brand_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CategoryImage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="ImagePath" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="clients">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Colors">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fk_Item_Id" Type="int" />
+  </EntityType>
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="company_id" />
+    </Key>
+    <Property Name="company_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="company_name" Type="nvarchar" MaxLength="100" />
+    <Property Name="address" Type="nvarchar" MaxLength="100" />
+    <Property Name="country" Type="nvarchar" MaxLength="50" />
+    <Property Name="phone" Type="nvarchar" MaxLength="45" />
+    <Property Name="fax" Type="varchar" MaxLength="45" />
+    <Property Name="Email" Type="varchar" MaxLength="45" />
+    <Property Name="url" Type="varchar" MaxLength="45" />
+    <Property Name="payment_method" Type="varchar" MaxLength="45" />
+    <Property Name="discount_type" Type="varchar" MaxLength="45" />
+    <Property Name="goods_type" Type="varchar" MaxLength="45" />
+    <Property Name="logo" Type="varchar" MaxLength="45" />
+    <Property Name="Companycol" Type="varchar" MaxLength="45" />
+    <Property Name="Extension" Type="nvarchar" MaxLength="50" />
+    <Property Name="Profile_photo" Type="nvarchar" MaxLength="150" />
+    <Property Name="FK_CompanyImage_ID" Type="int" />
+    <Property Name="FK_Category_Id" Type="int" />
+    <Property Name="FK_Locations_Id" Type="int" />
+    <Property Name="stateCompany" Type="bit" />
+  </EntityType>
+  <EntityType Name="CompanyImage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="ImagePath" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Contacts">
+    <Key>
+      <PropertyRef Name="user_code" />
+    </Key>
+    <Property Name="user_code" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="phone" Type="varchar" MaxLength="45" />
+    <Property Name="Email" Type="varchar" MaxLength="45" />
+    <Property Name="facebook" Type="varchar" MaxLength="45" />
+    <Property Name="twitter" Type="varchar" MaxLength="45" />
+    <Property Name="linkdln" Type="varchar" MaxLength="45" />
+    <Property Name="fax" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="FileType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="AttachfilePath" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="ItemRate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RateNumber" Type="int" />
+    <Property Name="FK_AspUserCreate_Id" Type="nvarchar" MaxLength="128" />
+    <Property Name="Description" Type="nvarchar" MaxLength="200" />
+    <Property Name="CreateOn" Type="datetime" StoreGeneratedPattern="Identity" />
+    <Property Name="Seen" Type="bit" />
+    <Property Name="FK_Item_Id" Type="int" />
+  </EntityType>
+  <EntityType Name="Items">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Color" Type="nvarchar" MaxLength="50" />
+    <Property Name="FK_Brand_Id" Type="int" />
+    <Property Name="Fk_UserCreate_Id" Type="nvarchar" MaxLength="128" />
+    <Property Name="Extension" Type="nvarchar" MaxLength="50" />
+    <Property Name="Profile_photo" Type="nvarchar" MaxLength="50" />
+    <Property Name="FK_ItemsImage_Id" Type="int" />
+    <Property Name="Price" Type="money" />
+    <Property Name="TotalSize" Type="nvarchar" MaxLength="50" />
+    <Property Name="Quntity" Type="int" />
+    <Property Name="Condition" Type="nvarchar" MaxLength="50" />
+    <Property Name="Discount" Type="money" />
+    <Property Name="CreateOn" Type="datetime" StoreGeneratedPattern="Identity" />
+    <Property Name="ModifedOn" Type="datetime" StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="text" />
+    <Property Name="State" Type="nvarchar" MaxLength="50" />
+    <Property Name="FK_Category_Id" Type="int" />
+    <Property Name="Width" Type="nvarchar" MaxLength="50" />
+    <Property Name="Height" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ItemsImage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="ImagePath" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Keywords">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fk_Item_Id" Type="int" />
+  </EntityType>
+  <EntityType Name="Locations">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="NeedUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="text" />
+    <Property Name="Extention" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProfileName" Type="nvarchar" MaxLength="50" />
+    <Property Name="FK_UserCreate_Id" Type="nvarchar" MaxLength="128" />
+    <Property Name="FK_Category_Id" Type="int" />
+    <Property Name="FK_NeedUserImage_Id" Type="int" />
+    <Property Name="CreateOn" Type="datetime" StoreGeneratedPattern="Identity" />
+    <Property Name="ModifedOn" Type="datetime" StoreGeneratedPattern="Identity" />
+    <Property Name="Color" Type="nvarchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="NeedUserImage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="5" />
+    <Property Name="ImagePath" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="orderID" />
+    </Key>
+    <Property Name="orderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="order_number" Type="varchar" MaxLength="45" />
+    <Property Name="order_date" Type="date" />
+    <Property Name="shipDate" Type="date" />
+    <Property Name="shipper_id" Type="varchar" MaxLength="30" />
+    <Property Name="sales_tax" Type="varchar" MaxLength="45" />
+    <Property Name="duration" Type="varchar" MaxLength="45" />
+    <Property Name="error_msg" Type="varchar" MaxLength="45" />
+    <Property Name="delted" Type="int" />
+    <Property Name="paid" Type="int" />
+    <Property Name="payment_date" Type="date" />
+    <Property Name="payment_id" Type="int" />
+    <Property Name="FK_UserCreate_Id" Type="nvarchar" MaxLength="128" />
+    <Property Name="FK_Items_Id" Type="int" />
+  </EntityType>
+  <EntityType Name="Payment">
+    <Key>
+      <PropertyRef Name="payment_id" />
+    </Key>
+    <Property Name="payment_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="payment_type" Type="varchar" MaxLength="45" />
+    <Property Name="allowed" Type="int" />
+  </EntityType>
+  <EntityType Name="Postions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Request">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RequestName" Type="nvarchar" MaxLength="50" />
+    <Property Name="FK_User_Id" Type="nvarchar" MaxLength="128" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="CreateOn" Type="datetime" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="ServerSettingFront">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FrontUrl" Type="nvarchar" MaxLength="50" />
+    <Property Name="BackUrl" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="UserImage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="ImagePath" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <Association Name="FK__Attachfil__Fk_Cl__1699586C">
+    <End Role="clients" Type="Self.clients" Multiplicity="0..1" />
+    <End Role="Attachfile" Type="Self.Attachfile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clients">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Attachfile">
+        <PropertyRef Name="Fk_Client_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Attachfil__Fk_Fi__15A53433">
+    <End Role="FileType" Type="Self.FileType" Multiplicity="0..1" />
+    <End Role="Attachfile" Type="Self.Attachfile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FileType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Attachfile">
+        <PropertyRef Name="Fk_FileType_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__NeedUser__FK_Cat__1C5231C2">
+    <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
+    <End Role="NeedUser" Type="Self.NeedUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NeedUser">
+        <PropertyRef Name="FK_Category_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__NeedUser__FK_Nee__1D4655FB">
+    <End Role="NeedUserImage" Type="Self.NeedUserImage" Multiplicity="0..1" />
+    <End Role="NeedUser" Type="Self.NeedUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NeedUserImage">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NeedUser">
+        <PropertyRef Name="FK_NeedUserImage_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__NeedUser__FK_Use__1B5E0D89">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="NeedUser" Type="Self.NeedUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NeedUser">
+        <PropertyRef Name="FK_UserCreate_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AspNetUsers_AspUserType">
+    <End Role="AspUserType" Type="Self.AspUserType" Multiplicity="0..1" />
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspUserType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUsers">
+        <PropertyRef Name="FK_UserType_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AspNetUsers_Company1">
+    <End Role="Company" Type="Self.Company" Multiplicity="0..1" />
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="company_id" />
+      </Principal>
+      <Dependent Role="AspNetUsers">
+        <PropertyRef Name="FK_Company_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AspNetUsers_UserImage">
+    <End Role="UserImage" Type="Self.UserImage" Multiplicity="0..1" />
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserImage">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUsers">
+        <PropertyRef Name="FK_UserImage_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Brand_BrandImage">
+    <End Role="CategoryImage" Type="Self.CategoryImage" Multiplicity="0..1" />
+    <End Role="Category" Type="Self.Category" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CategoryImage">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Category">
+        <PropertyRef Name="FK_CategoryImage_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Category_Brand_Relation_Brand">
+    <End Role="Brand" Type="Self.Brand" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Category_Brand_Relation" Type="Self.Category_Brand_Relation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Brand">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Category_Brand_Relation">
+        <PropertyRef Name="FK_Brand_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Category_Brand_Relation_Category">
+    <End Role="Category" Type="Self.Category" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Category_Brand_Relation" Type="Self.Category_Brand_Relation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Category_Brand_Relation">
+        <PropertyRef Name="FK_Category_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Category_CategoryImage">
+    <End Role="BrandImage" Type="Self.BrandImage" Multiplicity="0..1" />
+    <End Role="Brand" Type="Self.Brand" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BrandImage">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Brand">
+        <PropertyRef Name="FK_BrandImage_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Colors_Items">
+    <End Role="Items" Type="Self.Items" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Colors" Type="Self.Colors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Items">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Colors">
+        <PropertyRef Name="Fk_Item_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Company_Category1">
+    <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
+    <End Role="Company" Type="Self.Company" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Company">
+        <PropertyRef Name="FK_Category_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Company_CompanyImage">
+    <End Role="CompanyImage" Type="Self.CompanyImage" Multiplicity="0..1" />
+    <End Role="Company" Type="Self.Company" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CompanyImage">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Company">
+        <PropertyRef Name="FK_CompanyImage_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Company_Locations">
+    <End Role="Locations" Type="Self.Locations" Multiplicity="0..1" />
+    <End Role="Company" Type="Self.Company" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locations">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Company">
+        <PropertyRef Name="FK_Locations_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaims">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogins">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+    <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetRoles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ItemRate_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ItemRate" Type="Self.ItemRate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ItemRate">
+        <PropertyRef Name="FK_AspUserCreate_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ItemRate_Items">
+    <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
+    <End Role="ItemRate" Type="Self.ItemRate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Items">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ItemRate">
+        <PropertyRef Name="FK_Item_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Items_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Items" Type="Self.Items" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Items">
+        <PropertyRef Name="Fk_UserCreate_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Items_Brand">
+    <End Role="Brand" Type="Self.Brand" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Items" Type="Self.Items" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Brand">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Items">
+        <PropertyRef Name="FK_Brand_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Items_Category">
+    <End Role="Category" Type="Self.Category" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Items" Type="Self.Items" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Items">
+        <PropertyRef Name="FK_Category_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Items_ItemsImage">
+    <End Role="ItemsImage" Type="Self.ItemsImage" Multiplicity="0..1" />
+    <End Role="Items" Type="Self.Items" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ItemsImage">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Items">
+        <PropertyRef Name="FK_ItemsImage_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Keywords_Items">
+    <End Role="Items" Type="Self.Items" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Keywords" Type="Self.Keywords" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Items">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Keywords">
+        <PropertyRef Name="Fk_Item_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Orders_Items">
+    <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Items">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="FK_Items_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Request_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Request" Type="Self.Request" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Request">
+        <PropertyRef Name="FK_User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="orders_payment_fk">
+    <End Role="Payment" Type="Self.Payment" Multiplicity="0..1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Payment">
+        <PropertyRef Name="payment_id" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="payment_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DB_A4037C_E5tardpModelStoreContainer">
+    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspUserType" EntityType="Self.AspUserType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Attachfile" EntityType="Self.Attachfile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Brand" EntityType="Self.Brand" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BrandImage" EntityType="Self.BrandImage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Category_Brand_Relation" EntityType="Self.Category_Brand_Relation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CategoryImage" EntityType="Self.CategoryImage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="clients" EntityType="Self.clients" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Colors" EntityType="Self.Colors" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Company" EntityType="Self.Company" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CompanyImage" EntityType="Self.CompanyImage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contacts" EntityType="Self.Contacts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FileType" EntityType="Self.FileType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ItemRate" EntityType="Self.ItemRate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Items" EntityType="Self.Items" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ItemsImage" EntityType="Self.ItemsImage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Keywords" EntityType="Self.Keywords" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Locations" EntityType="Self.Locations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NeedUser" EntityType="Self.NeedUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NeedUserImage" EntityType="Self.NeedUserImage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Payment" EntityType="Self.Payment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Postions" EntityType="Self.Postions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Request" EntityType="Self.Request" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ServerSettingFront" EntityType="Self.ServerSettingFront" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserImage" EntityType="Self.UserImage" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Attachfil__Fk_Cl__1699586C" Association="Self.FK__Attachfil__Fk_Cl__1699586C">
+      <End Role="clients" EntitySet="clients" />
+      <End Role="Attachfile" EntitySet="Attachfile" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Attachfil__Fk_Fi__15A53433" Association="Self.FK__Attachfil__Fk_Fi__15A53433">
+      <End Role="FileType" EntitySet="FileType" />
+      <End Role="Attachfile" EntitySet="Attachfile" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NeedUser__FK_Cat__1C5231C2" Association="Self.FK__NeedUser__FK_Cat__1C5231C2">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="NeedUser" EntitySet="NeedUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NeedUser__FK_Nee__1D4655FB" Association="Self.FK__NeedUser__FK_Nee__1D4655FB">
+      <End Role="NeedUserImage" EntitySet="NeedUserImage" />
+      <End Role="NeedUser" EntitySet="NeedUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NeedUser__FK_Use__1B5E0D89" Association="Self.FK__NeedUser__FK_Use__1B5E0D89">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="NeedUser" EntitySet="NeedUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AspNetUsers_AspUserType" Association="Self.FK_AspNetUsers_AspUserType">
+      <End Role="AspUserType" EntitySet="AspUserType" />
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AspNetUsers_Company1" Association="Self.FK_AspNetUsers_Company1">
+      <End Role="Company" EntitySet="Company" />
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AspNetUsers_UserImage" Association="Self.FK_AspNetUsers_UserImage">
+      <End Role="UserImage" EntitySet="UserImage" />
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Brand_BrandImage" Association="Self.FK_Brand_BrandImage">
+      <End Role="CategoryImage" EntitySet="CategoryImage" />
+      <End Role="Category" EntitySet="Category" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Category_Brand_Relation_Brand" Association="Self.FK_Category_Brand_Relation_Brand">
+      <End Role="Brand" EntitySet="Brand" />
+      <End Role="Category_Brand_Relation" EntitySet="Category_Brand_Relation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Category_Brand_Relation_Category" Association="Self.FK_Category_Brand_Relation_Category">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="Category_Brand_Relation" EntitySet="Category_Brand_Relation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Category_CategoryImage" Association="Self.FK_Category_CategoryImage">
+      <End Role="BrandImage" EntitySet="BrandImage" />
+      <End Role="Brand" EntitySet="Brand" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Colors_Items" Association="Self.FK_Colors_Items">
+      <End Role="Items" EntitySet="Items" />
+      <End Role="Colors" EntitySet="Colors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Company_Category1" Association="Self.FK_Company_Category1">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="Company" EntitySet="Company" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Company_CompanyImage" Association="Self.FK_Company_CompanyImage">
+      <End Role="CompanyImage" EntitySet="CompanyImage" />
+      <End Role="Company" EntitySet="Company" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Company_Locations" Association="Self.FK_Company_Locations">
+      <End Role="Locations" EntitySet="Locations" />
+      <End Role="Company" EntitySet="Company" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ItemRate_AspNetUsers" Association="Self.FK_ItemRate_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="ItemRate" EntitySet="ItemRate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ItemRate_Items" Association="Self.FK_ItemRate_Items">
+      <End Role="Items" EntitySet="Items" />
+      <End Role="ItemRate" EntitySet="ItemRate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Items_AspNetUsers" Association="Self.FK_Items_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="Items" EntitySet="Items" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Items_Brand" Association="Self.FK_Items_Brand">
+      <End Role="Brand" EntitySet="Brand" />
+      <End Role="Items" EntitySet="Items" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Items_Category" Association="Self.FK_Items_Category">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="Items" EntitySet="Items" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Items_ItemsImage" Association="Self.FK_Items_ItemsImage">
+      <End Role="ItemsImage" EntitySet="ItemsImage" />
+      <End Role="Items" EntitySet="Items" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Keywords_Items" Association="Self.FK_Keywords_Items">
+      <End Role="Items" EntitySet="Items" />
+      <End Role="Keywords" EntitySet="Keywords" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Orders_Items" Association="Self.FK_Orders_Items">
+      <End Role="Items" EntitySet="Items" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Request_AspNetUsers" Association="Self.FK_Request_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="Request" EntitySet="Request" />
+    </AssociationSet>
+    <AssociationSet Name="orders_payment_fk" Association="Self.orders_payment_fk">
+      <End Role="Payment" EntitySet="Payment" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
