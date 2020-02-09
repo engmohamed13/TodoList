@@ -58,7 +58,6 @@ export class CreateTodoComponent implements OnInit {
     var todolistBindingModel:TodolistBindingModel=new TodolistBindingModel();
     todolistBindingModel.Name=this.createTodolistForm.value.Name;
     todolistBindingModel.Description=this.createTodolistForm.value.Description;
-    todolistBindingModel.CreatedDate=Date.now().toString();
     this.todolistService.createTodolist(this.createTodolistForm.value).then(res => {
       this.onAdded.emit();
       this.loadingService.hideLoading();

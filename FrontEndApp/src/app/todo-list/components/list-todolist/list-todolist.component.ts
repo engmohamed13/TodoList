@@ -53,7 +53,6 @@ export class ListTodolistComponent implements OnInit {
         this.thereIsNoSearchResult = false;
 
     },error=>{
-      debugger
       this.notificationService.showNotification(error.Message,NotificationType.Alert)
     })
   }
