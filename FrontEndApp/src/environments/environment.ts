@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  API_URL: 'http://localhost:49357/',
+  API_URL: 'http://localhost:51724/',
   baseUrl:"http://localhost:4202",
   virtualDirectory: "/",
   virtualDirectoryLanguage: "http://localhost:4202",

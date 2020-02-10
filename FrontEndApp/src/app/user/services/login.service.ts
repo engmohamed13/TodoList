@@ -16,15 +16,13 @@ export class LoginService {
   Login(loginModel:LoginModel){
     let data = "UserName=" + loginModel.userName + "&Password=" + loginModel.password + "&grant_type=password";
 
-    return this.http.post<loginTokenModel>('oauth2/token',data,{
+    return this.http.post<loginTokenModel>('Token',data,{
       headers: new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded'),
     }).toPromise();
   }
-  get(){
-    return this.http.get('api/TodoLists').toPromise();
-  }
+ 
   register(registerBindingModel:RegisterBindingModel){
-    return this.http.post('api/Account/create',registerBindingModel).toPromise();
+    return this.http.post('api/Account/Register',registerBindingModel).toPromise();
   }
   removeCurrentUserModel() {
     this.userInfoViewModel = null;

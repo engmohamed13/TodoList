@@ -6,6 +6,7 @@ import { NotificationType } from './_shared/components/notification/notification
 import { ToastrService } from 'ngx-toastr';
 import { Router, NavigationStart, NavigationEnd, NavigationCancel, NavigationError, Event } from '@angular/router';
 import { MenuService } from './_shared/services/menu.service';
+import { LoginService } from './user/services/login.service';
 
 @Component({
   selector: 'app-root',
@@ -126,4 +127,5 @@ export class AppComponent implements OnInit {
       this.arabicLang = false
     }
   }
+  
 }
