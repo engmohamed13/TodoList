@@ -1,4 +1,26 @@
 ﻿{
-  "message_whiteSpace": "space not value valid"
+  "message_whiteSpace": "المسافات ليست قيمة صحيحة",
+  "Logout":"تسجيل الخروج",
+  "Add TodoList":"أضافة حدث",  
+"Add New User Successsfully":"تم أضافة مستخدم جديد",
+"First name min length 2 chars":"الاسم الاول لا يسمح اقل من حرفين",
+"First name is required":"الاسم الاول مطلوب",
+"Password_conditions": "يجب أن تحتوي كلمة المرور على رقم واحد وحرف واحد على الأقل",
+"Password_length": "يجب ألا يقل طول كلمة المرور عن 8 أحرف.",
+"insert_password_confirmation": "من فضلك ادخل تاكيد الرقم السرى",
+"insert_email": "من فضلك ادخل البريد الاكترونى",
+"insert_same_again": "من فضلك ادخل نفس القيمة مرة اخرى",
+"Welcome To ToDo":"أهلابك فى الاحداث لديك",
+"Total Todolist":"عدد الاحداث",
+"no":"لا",
+"Search Result":"توجد نتائج بحث",
+"Name":"ألاسم",
+"Description":"التفاصيل",
+"Created Date":"تاريخ لاانشاء",
+"Modification Date":"تاريخ التعديل",
+"Actions":"إجراءات",
+"Delete":"مسح",
+"Edit":"تعديل"
+
 
 }

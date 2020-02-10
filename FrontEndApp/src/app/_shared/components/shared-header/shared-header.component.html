@@ -1,4 +1,4 @@
-<header >
+<!-- <header >
   <div class="container">
     <div class="d-flex flex-wrap align-items-center justify-content-between">
       <div class="logoSide">
@@ -40,5 +40,36 @@
   </div>
   <section class="wow fadeIn">
   </section>
-</header>
+</header> -->
 
+
+<header class="bg-transparent M_signheader">
+  <nav class="navbar navbar-expand-lg menuContainer p-0">
+      <div class="container-fluid ">
+          <div class="nav-side d-flex align-items-center p-0
+              justify-content-end">
+
+              <div class="navbar-collapse align-items-center
+                  justify-content-end" id="navbars">
+
+
+                  <ul class="navbar-nav fastlinks-list user-menu M_hedrnavlist M_loginheader">
+                      <li class="nav-item dropdown langDropdown lungInsign-btn ml-2">
+                   
+                              <span *ngIf="!isArabicLanguage" (click)="changeLanguage()">عربي</span>
+                              <span *ngIf="isArabicLanguage" (click)="changeLanguage()">EN</span>
+                      
+                      </li>      
+                       <li class="nav-item dropdown ">
+                   
+                          <div class="M_newUser w-100 text-center font-Light" ><a  (click)="logout()" class="aidnav">
+                              <span class="aidnav_content_onwhite" tabindex="-1">
+                                {{'Logout'|translate}}</span></a></div>
+                                
+                  </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </nav>
+</header>

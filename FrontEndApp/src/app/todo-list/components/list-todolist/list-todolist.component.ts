@@ -21,7 +21,6 @@ export class ListTodolistComponent implements OnInit {
   keySearch
   todolists: TodolistViewModel[] = []
   thereIsNoSearchResult: boolean;
-  isAuthorized:boolean;
   constructor(private todolistService: TodolistService,
     private authService:AuthService,
     private notificationService:NotificationService) { }
@@ -29,7 +28,6 @@ export class ListTodolistComponent implements OnInit {
   ngOnInit() {
 
     this.getAll();
-    this.isAuthorized = this.authService.isAuthenticated();
 
     // this.get();
   }

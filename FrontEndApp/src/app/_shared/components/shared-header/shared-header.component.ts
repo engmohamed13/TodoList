@@ -47,5 +47,8 @@ export class SharedHeaderComponent implements OnInit {
     window.location.href = environment.baseUrl + this.router.url;
 
   }
+  logout(){
+    this.authService.logout();
+  }
 
 }

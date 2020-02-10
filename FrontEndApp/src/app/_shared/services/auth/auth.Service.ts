@@ -50,7 +50,7 @@ export class AuthService {
 
     logout() {
         this.logoutWithoutRedirect();
-        this.router.navigate(['/']);
+        this.router.navigate(['/login']);
     }
 
     logoutWithoutRedirect() {
@@ -94,6 +94,15 @@ export class AuthService {
     }
     setCurrentLanguage(language) {
         localStorage.setItem(this.SelectedLanguageKEY, language);
+        if(language=="ar"){
+            this.removeEnglishStyle();
+            this.setArabicLanguageStyle();
+            
+        }else{
+            this.removeArabicStyle();
+            
+        }
+
     }
 
 

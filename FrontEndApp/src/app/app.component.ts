@@ -102,6 +102,7 @@ export class AppComponent implements OnInit {
   }
 
   hideNotificationMessage() {
+
     this.showNotification = false;
   }
 
