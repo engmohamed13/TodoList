@@ -20,7 +20,19 @@
 "Modification Date":"Modification Date",
 "Actions":"Actions",
 "Delete":"Delete",
-"Edit":"Edit"
+"Edit":"Edit",
+"Create Todo":"Create Todo",
+"create":"Create",
+"cancel":"Cancel",
+"Description is required":"Description is required",
+"Name is required":"Name is required",
+"Add TodoList Successfully":"Add TodoList Successfully",
+"Update":"Update",
+"Enter Name":"Enter Name",
+"Enter Description":"Enter Description",
+"Are you sure you want to delete this Todo?":"Are you sure you want to delete this Todo?",
+"todo deleted successfully":"todo deleted successfully",
+"yes":"yes"
 
 
 

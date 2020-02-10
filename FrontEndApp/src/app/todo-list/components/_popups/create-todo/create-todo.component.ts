@@ -25,10 +25,10 @@ export class CreateTodoComponent implements OnInit {
   createTodolistForm: FormGroup;
 
   public validationMessages = {
-    Name_required: 'Name is required',
-    Name_whitespace: 'Space not valid value',
-    Description_required: 'Description is required',
-    tDescription_whitespace: 'Space not valid value',
+    Name_required: this.translate.instant('Name is required'),
+    Name_whitespace: this.translate.instant('Space not valid value'),
+    Description_required: this.translate.instant('Description is required'),
+    tDescription_whitespace: this.translate.instant('Space not valid value'),
 
  
 

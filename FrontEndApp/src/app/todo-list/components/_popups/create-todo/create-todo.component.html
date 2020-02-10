@@ -9,10 +9,10 @@
       <div class="d-flex row">
         <div class="col-12">
           <div class="form-group M_HavAval">
-            <label class="mb-0" for="title"> {{'Name ' | translate}}
+            <label class="mb-0" for="title"> {{'Name' | translate}}
             </label>
             <input type="text" formControlName="Name" id="title" maxlength="100" class="form-control M_inputStyl"
-              placeholder="{{'Enter English Title' | translate}}">
+              placeholder="{{'Enter Name'| translate}}">
             <control-messages [control]="createTodolistForm.controls.Name" [title]="'Name'"
               [validationMessages]="validationMessages" [inputType]="'lg-input'"></control-messages>
           </div>
@@ -23,7 +23,7 @@
             <label class="mb-0" for="Description">{{'Description' | translate}}
             </label>
             <textarea class="form-control" id="Description" rows="4"  formControlName="Description"
-              placeholder="{{'Enter Embed Video Html' | translate}}"></textarea>
+              placeholder="{{'Enter Description' | translate}}"></textarea>
             <control-messages [control]="createTodolistForm.controls.Description" [title]="'Description'"
               [validationMessages]="validationMessages" [inputType]="'lg-input'"></control-messages>
           </div>
